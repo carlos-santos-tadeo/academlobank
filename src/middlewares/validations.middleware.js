@@ -26,7 +26,7 @@ exports.loginValidation = [
 
 exports.createTransactionValidation = [
   body('amount').notEmpty().withMessage('Amount is required'),
-  body('accountSender').notEmpty().withMessage('Sender user id is required'),
-  body('accountReceiver').notEmpty().withMessage('Receiver user id is required'),
+  body('senderUserId').notEmpty().withMessage('Sender user id is required'),
+  body('receiverUserId').notEmpty().withMessage('Receiver user id is required'),
   validateField,
 ];

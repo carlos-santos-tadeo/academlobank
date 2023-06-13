@@ -4,14 +4,14 @@ const catchAsync = require('../utils/catchAsync');
 
 exports.createTransfer = catchAsync(async (req, res, next) => {
   //traemos los datos del req.body
-  const { amount, accountSender, accountReceiver } = req.body;
+  const { amount, senderUserId, receiverUserId } = req.body;
   //usuario remitente
   const senderUser = await User.findOne({
-    where: { accountNumber: accountSender, status: 'active' },
+    where: { accountNumber: senderUserId, status: 'active' },
   });
   //usuario receptor
   const receiverUser = await User.findOne({
-    where: { accountNumber: accountReceiver, status: 'active' },
+    where: { accountNumber: receiverUserId, status: 'active' },
   });
 
   //verificamos 
@@ -42,8 +42,8 @@ exports.createTransfer = catchAsync(async (req, res, next) => {
 
   const transfer = await Transfer.create({
     amount,
-    accountSender,
-    accountReceiver,
+    senderUserId,
+    receiverUserId,
   });
   
   res.status(201).json({

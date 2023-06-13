@@ -12,11 +12,11 @@ const Transfer = db.define('transfer', {
     type: DataTypes.INTEGER,
     allowNull: false,
   },
-  accountSender: {
+  senderUserId: {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  accountReceiver: {
+  receiverUserId: {
     type: DataTypes.STRING,
     allowNull: false,
   },
