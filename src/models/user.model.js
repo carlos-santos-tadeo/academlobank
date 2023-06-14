@@ -24,7 +24,6 @@ const User = db.define('user', {
   amount: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    defaultValue: 1000,
   },
   status: {
     type: DataTypes.ENUM('active', 'disabled'),

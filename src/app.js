@@ -7,7 +7,6 @@ const globalErrorHandler = require('./controllers/error.controller');
 
 //routes
 const authRouter = require('./routes/auth.routes');
-// const userRouter = require('./routes/user.routes');
 const transferRouter = require('./routes/transfer.routes');
 
 const app = express();
@@ -20,7 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 
 //rutas
 app.use('/api/v1/users', authRouter);
-// app.use('/api/v1/users', userRouter);
+
 app.use('/api/v1/transfers', transferRouter);
 
 app.all('*', (req, res, next) => {
