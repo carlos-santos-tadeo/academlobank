@@ -18,15 +18,14 @@ exports.createUserValidation = [
   validateField,
 ];
 
-exports.loginValidation = [
-  body('accountNumber').notEmpty().withMessage('Account is required'),
-  body('password').notEmpty().withMessage('Password is required'),
+exports.loginUserValidation = [
+  body('accountNumber')
+  .notEmpty()
+  .withMessage('Account is required'),
+  body('password')
+  .notEmpty()
+  .withMessage('Password is required'),
   validateField,
 ];
 
-exports.createTransactionValidation = [
-  body('amount').notEmpty().withMessage('Amount is required'),
-  body('senderUserId').notEmpty().withMessage('Sender user id is required'),
-  body('receiverUserId').notEmpty().withMessage('Receiver user id is required'),
-  validateField,
-];
+

@@ -13,7 +13,12 @@ exports.signup = catchAsync(async (req, res, next) => {
   const amount = 1000;
 
   //creacion del usuario
-  const user = await User.create({ name, accountNumber, password, amount });
+  const user = await User.create({
+    name,
+    accountNumber,
+    password,
+    amount,
+  });
 
   res.status(201).json({ status: 'success', message: 'User created!', user });
 });
@@ -25,16 +30,23 @@ exports.login = catchAsync(async (req, res, next) => {
   const user = await User.findOne({
     where: {
       accountNumber,
+      status: 'active',
     },
   });
 
   if (!user) {
     return next(new AppError('Incorrect data', 404));
   }
-  
+
   if (!((await user.password) === password)) {
-    return next(new AppError('Incorrect data', 401));
+    return next(new AppError('Wrong account number or password', 401));
   }
 
-  res.status(200).json({ status: 'success', message: 'Login successful!' });
+  res.status(200).json({
+    status: 'success',
+    message: 'Login successful!',
+    name: user.name,
+    accountNumber: user.accountNumber,
+    amount: user.amount,
+  });
 });

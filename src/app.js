@@ -6,7 +6,7 @@ const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/error.controller');
 
 //routes
-const authRouter = require('./routes/auth.routes');
+const authRouter = require('./routes/user.routes');
 const transferRouter = require('./routes/transfer.routes');
 
 const app = express();

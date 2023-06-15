@@ -3,3 +3,12 @@
 [2023-06-13T08:10:00.278Z] info: no existe la relación «users» || undefined undefined
 [2023-06-13T08:11:42.989Z] info: Can't find /api/v1/user/signup on this server! || undefined undefined
 [2023-06-13T08:11:47.923Z] info: no existe la relación «users» || undefined undefined
+[2023-06-14T05:00:06.651Z] info: Incorrect data || undefined undefined
+[2023-06-14T05:00:29.025Z] info: Incorrect data || undefined undefined
+[2023-06-14T05:00:42.010Z] info: Incorrect data || undefined undefined
+[2023-06-15T05:45:26.868Z] info: Wrong account number or password || undefined undefined
+[2023-06-15T05:50:29.068Z] info: AppError is not defined || undefined undefined
+[2023-06-15T06:07:54.822Z] info: Wrong account number or password || undefined undefined
+[2023-06-15T06:09:41.256Z] info: Wrong account number or password || undefined undefined
+[2023-06-15T06:18:53.024Z] info: no existe la columna user.senderUserId || undefined undefined
+[2023-06-15T06:25:38.376Z] info: Wrong account number or password || undefined undefined

@@ -8,6 +8,6 @@ const transferMiddleware = require('../middlewares/transfers.middlewares');
 
 const router = express.Router();
 
-router.post('/', transferMiddleware.createTransferValidation, transferController.createTransfer);
+router.post('/', transferMiddleware.transferValidation, transferController.transfer);
 
 module.exports = router;

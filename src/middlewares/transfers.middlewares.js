@@ -8,7 +8,7 @@ const validateField = (req, res, next) => {
   next();
 };
 
-exports.createTransferValidation = [
+exports.transferValidation = [
   body('amount').notEmpty().withMessage('Amount is required'),
   body('senderUserId').notEmpty().withMessage('Sender user id is required'),
   body('receiverUserId').notEmpty().withMessage('Receiver user id is required'),
